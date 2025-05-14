@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Carga de Barra</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Carga de Barra</h1>
+
+        <label for="pesoMaximo">Peso Máximo (1RM en libras):</label>
+        <input type="number" id="pesoMaximo" name="pesoMaximo" value="305">
+
+        <label for="porcentaje">Porcentaje del Peso Máximo a Trabajar (%):</label>
+        <input type="number" id="porcentaje" name="porcentaje" value="80">
+
+        <label for="tipoBarra">Tipo de Barra:</label>
+        <select id="tipoBarra" name="tipoBarra">
+            <option value="45">Olímpica Estándar (45 lbs)</option>
+            <option value="35">Barra Técnica/Femenina (35 lbs)</option>
+        </select>
+
+        <div class="checkbox-group">
+            <legend>Discos Disponibles (libras):</legend>
+            <label><input type="checkbox" name="discos" value="55"> 55</label>
+            <label><input type="checkbox" name="discos" value="45" checked> 45</label>
+            <label><input type="checkbox" name="discos" value="35" checked> 35</label>
+            <label><input type="checkbox" name="discos" value="25" checked> 25</label>
+            <label><input type="checkbox" name="discos" value="15" checked> 15</label>
+            <label><input type="checkbox" name="discos" value="10" checked> 10</label>
+            <label><input type="checkbox" name="discos" value="5" checked> 5</label>
+            <label><input type="checkbox" name="discos" value="2.5" checked> 2.5</label>
+        </div>
+
+        <button id="calcularBtn">Calcular</button>
+
+        <div id="resultado">
+            <p id="peso-objetivo-display"></p>
+            <div class="barra-container">
+                <div id="ladoIzquierdo" class="lado-barra izquierdo"></div>
+                <div class="barra-visual"></div>
+                <div id="ladoDerecho" class="lado-barra derecho"></div>
+            </div>
+            <p id="peso-total-cargado"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
